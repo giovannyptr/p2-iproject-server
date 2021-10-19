@@ -3,7 +3,7 @@ const app = express()
 const port = 3000
 const routes = require('./routes/index')
 
-//bodyparser
+//bodyparser or middleware
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 
