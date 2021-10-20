@@ -2,13 +2,11 @@
 const {
   Model
 } = require('sequelize');
+const { hashingPassword } = require('../helpers/bcrypt')
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
-    static associate(models) {
-      User.belongsToMany(models.Product,
-        {
-          through: models.MyCart, foreignKey: 'UserId'
-        });
+    static associate(models) { 
+      User.belongsToMany(models.Product, { through: models.MyCart, foreignKey: 'UserId'});
     }
   };
   User.init({
@@ -23,22 +21,13 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
       validate: { notEmpty: { msg: 'Password can not be empty' } }
-    },
-    typeskin: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: { notEmpty: { msg: 'Typeskin can not be empty' } }
-    },
-    CategoryId: {
-      type: Sequelize.INTEGER,
-      references: {
-        model: 'Product',
-        key: 'id'
-      },
-      onUpdate: 'cascade',
-      onDelete: 'cascade'
     }
   }, {
+    hooks: {
+      beforeCreate: (user) => {
+        user.password = hashingPassword(user.password)
+      }
+    },
     sequelize,
     modelName: 'User',
   });

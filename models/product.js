@@ -5,6 +5,7 @@ const {
 module.exports = (sequelize, DataTypes) => {
   class Product extends Model {
     static associate(models) {
+      Product.belongsTo(models.Category, { foreignKey: 'categoryId' })
       Product.belongsToMany(models.User,
         {
           through: models.MyCart, foreignKey: 'ProductId'
@@ -25,9 +26,18 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
     },
     price: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
+    CategoryId: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Categories',
+        key: 'id'
+      },
+      onUpdate: 'cascade',
+      onDelete: 'cascade'
+    }
   }, {
     sequelize,
     modelName: 'Product',
