@@ -3,6 +3,7 @@ const userController= require('../controllers/userController')
 const productController = require('../controllers/productController')
 const cartController = require('../controllers/cartController')
 const authentication = require('../middlewares/authentication')
+const authorization = require('../middlewares/authorization')
 
 
 router.get('/', (req, res) => {
@@ -17,10 +18,10 @@ router.get('/products/:id', productController.detailProduct)
 
 router.use(authentication)
 
-router.post('/mycarts', cartController.addCart)
+router.post('/mycarts', authorization, cartController.addCart)
 router.get('/mycarts', cartController.getMyCart)
-router.patch('/mycarts/:id', cartController.quantity)
-router.delete('/mycarts/:id', cartController.removeCart)
+router.patch('/mycarts/:id', authorization, cartController.quantity)
+router.delete('/mycarts/:id', authorization, cartController.removeCart)
 
 
 module.exports = router
