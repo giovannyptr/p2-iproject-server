@@ -1,5 +1,7 @@
 const { User, Category, Product, MyCart } = require('../models')
+const { nanoid } = require('nanoid');
 const calculatePrice = require('../helpers/calculatePrice')
+const createTransaction = require('../helpers/midtrans')
 
 class CartController {
 
@@ -76,7 +78,7 @@ class CartController {
 
    
 
-    static async checkoutProduct(req, res, next) {
+    static async checkoutProducts(req, res, next) {
         const { productIds } = req.body;
         try {
           const products = await Product.findAll({
@@ -111,10 +113,10 @@ class CartController {
             },
             items_detail: items_detail,
             customer_details: {
-              first_name: req.user_login.name,
               email: req.user_login.email,
             },
           };
+
           const results = await createTransaction(parameter);
     
           const payload = products.map((course) => {
@@ -132,6 +134,45 @@ class CartController {
             token: results.token,
             redirect_url: results.redirect_url,
           });
+        } catch (err) {
+          next(err);
+        }
+      }
+
+      static async notifMidtransHandler(req, res, next) {
+        const { transaction_status, order_id } = req.body;
+    
+        try {
+          if (
+            transaction_status === "settlement" ||
+            transaction_status === "capture"
+          ) {
+            const results = await Product.update(
+              {
+                status: "active",
+              },
+              { where: { order_id }, returning: true }
+            );
+    
+            const productIds = results[1].map((element) => {
+              return element.ProductId;
+            });
+    
+            const products = await Product.findAll({
+              where: {
+                id: productIds,
+              },
+            });
+    
+            const instructors = products.map((course) => {
+              return {
+                price: course.price,
+                instructor_id: course.instructor_id,
+              };
+            });
+    
+            res.status(200);
+          }
         } catch (err) {
           next(err);
         }
