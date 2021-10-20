@@ -1,4 +1,5 @@
 const { User, Category, Product, MyCart } = require('../models')
+const calculatePrice = require('../helpers/calculatePrice')
 
 class CartController {
 
@@ -73,27 +74,68 @@ class CartController {
         }
     }
 
-    static async quantity(req, res, next) {
+   
+
+    static async checkoutProduct(req, res, next) {
+        const { productIds } = req.body;
         try {
-            let { quantity } = req.body;
-            const id = Number(req.params.id);
-
-            const beforeUpdate = await MyCart.findOne({ where: { id } });
-
-            if (!beforeUpdate) {
-                throw { name: "productNotFound" };
-            }
-
-            const result = await MyCart.update({ quantity }, { where: { id }, returning: true });
-
-
-            res.status(200).json({msg: 'Your cart have been updated'});
-
-
+          const products = await Product.findAll({
+            where: {
+              id: productIds,
+            },
+          });
+    
+          if (products.length === 0 || products.length !== productIds.length) {
+            throw {
+              name: "productNotFound",
+            };
+          }
+    
+          const totalPrice = calculatePrice(products);
+          const order_id = nanoid(30);
+          const items_detail = products.map((e) => {
+            return {
+              price: e.price,
+              title: e.title,
+              quantity: 1,
+            };
+          });
+    
+          const parameter = {
+            transaction_details: {
+              order_id: order_id,
+              gross_amount: totalPrice,
+            },
+            credit_card: {
+              secure: true,
+            },
+            items_detail: items_detail,
+            customer_details: {
+              first_name: req.user_login.name,
+              email: req.user_login.email,
+            },
+          };
+          const results = await createTransaction(parameter);
+    
+          const payload = products.map((course) => {
+            return {
+              UserId: req.user_login.id,
+              CourseId: course.id,
+              status: "pending",
+              order_id: order_id,
+            };
+          });
+          await UserCourse.bulkCreate(payload);
+          res.status(201).json({
+            code: 201,
+            message: "success create new transaction",
+            token: results.token,
+            redirect_url: results.redirect_url,
+          });
         } catch (err) {
-            next(err);
+          next(err);
         }
-    }
+      }
 }
 
 module.exports = CartController

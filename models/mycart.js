@@ -28,10 +28,6 @@ module.exports = (sequelize, DataTypes) => {
       onUpdate: 'cascade',
       onDelete: 'cascade'
     },
-    quantity: {
-      type: DataTypes.STRING,
-      allowNull: false
-    }
   }, {
     sequelize,
     modelName: 'MyCart',
