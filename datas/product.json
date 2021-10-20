@@ -1,0 +1,131 @@
+[
+    {
+        "name" : "YOUR SKIN BAE SERIES",
+        "brand": "Avoskin",
+        "description": "Avoskin menghadirkan brightening dan hydrating toner dengan kandungan Niacinamide 7% yang dipadukan dengan Alpha Arbutin 1% dan ekstrak kale. Perpaduan kandungan active dan natural dalam Niacinamide 7% + Alpha Arbutin 1% + Kale Time to Glow bermanfaat untuk mencerahkan kulit, membantu mengurangi noda hitam dan menghidrasi kulit secara optimal sehingga memperkuat skin barrier.",
+        "price": "Rp.137676",
+        "CategoryId": 1,
+        "img_url": "https://www.latifika.com/wp-content/uploads/2019/11/Vit-C-Avoskin-toner-scaled.jpg"
+    },
+    {
+        "name" : "Face Toner Cica Series",
+        "brand": "NPure",
+        "description": "Membantu membersihkan wajah dari sisa kotoran, menyeimbangkan PH wajah, mencerahkan kulit wajah, merawat kulit berjerawat serta membuat kulit terasa segar, lembut dan lembab.",
+        "price": "Rp.100000",
+        "CategoryId": 1,
+        "img_url": "https://jakimen.com/wp-content/uploads/2020/08/Review-Npure-Face-Toner-Centella-Asiatica.jpg"
+    },
+    {
+        "name" : "CICA Care Toner",
+        "brand": "Jarte Beauty",
+        "description": "A lightweight and hydrating toner that helps to retore and balance the skin's natural moisture barrier and to soothe irritated skin",
+        "price": "Rp.76000",
+        "CategoryId": 1,
+        "img_url": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/MTA-11046420/jarte_jarte_beauty_cica_care_toner_-100_ml-_full05_mj1iy0xx.jpeg"
+    },
+    {
+        "name" : "Seastem Marine Hydrating Toner",
+        "brand": "Sensatia Botanicals",
+        "description": "Mengandung nutrisi dari laut yang kaya akan antioksidan, toner wajah ini memiliki manfaat anti-aging dan melembabkan secara intens. Kombinasi ekstrak giant sea kelp dan hyaluronate bersatu melembabkan kulit yang kering dan meningkatkan elastisitas. Apabila digunakan secara teratur, toner ini dapat memberikan kelembaban menyeluruh dan perlindungan jangka panjang terhadap polusi dari lingkungan.",
+        "price": "Rp.250000",
+        "CategoryId": 1,
+        "img_url": "http://3.bp.blogspot.com/-Eu-qxlAC9RM/Vp9pnxgKczI/AAAAAAAADRw/o8L-SuKXiRk/s1600/snn.jpg"
+    },
+    {
+        "name" : "Dark Spot Essence",
+        "brand": "LACOCO",
+        "description": "Dark Spot Essence merupakan essence yang digunakan setiap malam untuk membantu memperbaiki kondisi kulit. Diformulasikan dengan kombinasi bahan terbaik dari alam dengan zat aktif yang telah teruji secara klinis, Dark Spot Essence dapat membantu menjaga kulit tetap sehat, dan mengurangi tampilan flek hitam.",
+        "price": "Rp.190000",
+        "CategoryId": 2,
+        "img_url": "https://id-test-11.slatic.net/p/cd5b68ca1f882a762e6a1c9cdfcd4a31.jpg"
+    },
+    {
+        "name" : "Snail Bee High Content Essence",
+        "brand": "Benton",
+        "description": "Snail Bee High Content Essence adalah essence yang mengandung Snail Secretion Filtrate dan Racun Lebah yang baik untuk regenerasi sel, melembabkan, merawat elastisitas kulit, dan mengurangi radang. Selain itu, essence ini juga mengandung Niacinamide yang dapat mencerahkan dan meratakan warna kulit, serta membantu untuk menyamarkan noda hitam pada kulit. Kandungan Adenosine pada essence ini juga baik untuk membantu menyamarkan tanda penuaan dan menyamarkan gari-garis halus pada wajah. Direkomendasikan untuk kulit yang berjerawat, kusam, dan warna kulit yang tidak rata.",
+        "price": "Rp.180000",
+        "CategoryId": 2,
+        "img_url": "https://media.karousell.com/media/photos/products/2019/06/22/benton_snail_bee_high_content_essence_1561133943_6026b1cb_progressive.jpg"
+    },
+    {
+        "name" : "Phyto Power Essence",
+        "brand": "Bio Beauty Lab",
+        "description": "Adalah Essence yang merangkap Pre-Serum untuk memaksimalkan kinerja perawatan wajah setelahnya (serum / ampoule 2 moisturizer).",
+        "price": "Rp.266000",
+        "CategoryId": 2,
+        "img_url": "https://jakimen.com/wp-content/uploads/2021/04/Review-Bio-Beauty-Lab-Phyto-Power-Essence.png"
+    },
+    {
+        "name" : "Brightening Essence",
+        "brand": "Votre Peau",
+        "description": "Brightening essence merupakan campuran dari berbagai bahan aktif dan zat yang melembabkan. Bahan-bahan tersebut diformulasikan untuk memberikan nutrisi pada kulit. Hyaluronic acid dapat membantu menjaga kelembapan kulit. Niacinamide mencerahkan kulit yang kusam. Fermentasi beras mengandung banyak mineral, vitamin, dan enzim yang memberikan banyak manfaat pada kulit, seperti mengurangi flek hitam, warna kulit yang tidak merata dan mencerahkan kulit.",
+        "price": "Rp.211650",
+        "CategoryId": 2,
+        "img_url": "https://studio.femaledaily.com/1814-large_default/brightening-essence.jpg"
+    },
+    {
+        "name" : "Freshly Juiced Vitamin Drop",
+        "brand": "Dear Klairs",
+        "description": "Freshly Juice Vitamin Drop adalah antioksidan yang terbaik dalam mencegah penuaan dan membantu mencerahkan kulit wajah. Klairs Juiced Vitamin Drop mengandung 5% ascorbic acid cocok untuk semua jenis kulit dan usia bahkan jika anda memiliki kulit yang super sensitif.",
+        "price": "Rp.315000",
+        "CategoryId": 3,
+        "img_url": "http://image.femaledaily.com/dyn/640/images/prod-pics/product_1579171243_Klairs_Fre_800x800.jpg"
+    },
+    {
+        "name" : "Jeju Pomegranate Revitalizing Serum",
+        "brand": "Innisfree",
+        "description": "Essence untuk revitalisasi dengan bahan aktif dari buah delima Jeju segar untuk kulit yang cerah dan sehat. Perkenalan Produk : 1. Bahan aktif dari buah delima Jeju memperlambat 5 tanda penuaan – hilangnya kelembapan, energi, cahaya, ketegasan, dan munculnya keriput – untuk menjaga kesehatan dan kecerahan wajah. 2. Asam ellagic yang ada di dalam sari buah delima Jeju memperlambat tanda penuaan yang disebabkan oleh iritasi luar dan kekuatan defensif kulit untuk menjaganya tetap sehat. 3. Bahan yang alami memperkuat perlindungan kulit dan adenosin mengembangkan sintesis kolagen untuk membuat kulit kencang, kenyal, dan bercahaya.",
+        "price": "Rp.430000",
+        "CategoryId": 3,
+        "img_url": "https://static-01.shop.com.mm/p/b518395b3b4aacd91db2b09d0184a9ef.jpg"
+    },
+    {
+        "name" : "Midnight Blue Activating Youth Drop",
+        "brand": "Dear Klairs",
+        "description": "Produk ini cocok untuk mengurangi garis-garis halus atau keriput, cocok digunakan bagi yang sudah memiliki tanda-tanda penuaan atau bagi yang ingin mencegah keriput.",
+        "price": "Rp.365500",
+        "CategoryId": 3,
+        "img_url": "http://image.femaledaily.com/dyn/640/images/prod-pics/product_1579170951_Klairs_Mid_800x800.jpg"
+    },
+    {
+        "name" : "Super Matcha Pore Tightening Serum",
+        "brand": "SOME BY MI",
+        "description": "Serum dengan fungsi utama mengencangkan pori-pori ini terasa menyegarkan saat diaplikasikan anpa meninggalkan rasa lengket. Mengandung Matcha dari daerah Bosung, Korea Selatan yang berkualitas tinggi.",
+        "price": "Rp.264000",
+        "CategoryId": 3,
+        "img_url": "https://images.tokopedia.net/img/cache/500-square/VqbcmM/2020/12/3/b711269b-65e6-4025-b599-0d2d3a989524.jpg"
+    },
+    {
+        "name" : "AC Collection Calming Foam Cleanser",
+        "brand": "COSRX",
+        "description": "Pembersih wajah untuk kulit berjerawat. Dengan  kandungan Salicylic Acid, Asiaticoside, dan Asiatic acid berfungsi untuk mengangkat sel-sel kulit mati dengan lembut, menyegarkan, dan mempertahankan keseimbangan kelembaban kulit wajah.",
+        "price": "Rp.185000",
+        "CategoryId": 4,
+        "img_url": "https://www.stylekorean.com/data/tryme/resources/images/22_1626254184_insta_img2.jpg"
+    },
+    {
+        "name" : "Real Fresh Foam",
+        "brand": "Neogen Dermalogy",
+        "description": "Pembersih wajah berbahan dasar air dengan ekstrak buah dan whole grain yang disesuaikan dengan jenis kulitmu.",
+        "price": "Rp.228650",
+        "CategoryId": 4,
+        "img_url": "https://s3-ap-southeast-1.amazonaws.com/soc-uploader/images/4r9OoV8861VZ5XZ4KkiJtMjAn4J5NQ_1505286343.jpg"
+    },
+    {
+        "name" : "Oil-Free Acne Wash",
+        "brand": "Neutrogena",
+        "description": "NEUTROGENA® Oil-Free Acne Wash dengan Microclear Technology membersihkan dan merawat kulit yang berjerawat dalam satu langkah. Formulanya membantu mengurangi minyak dan membersihkan pori-pori yang tersumbat dengan lembut tanpa membuat kulit terlalu kering",
+        "price": "Rp.159.000",
+        "CategoryId": 4,
+        "img_url": "http://image.femaledaily.com/dyn/500/images/prod-pics/product_1601367131_Neutrogena_800x800.png"
+    },
+    {
+        "name" : "Gentle Skin Cleanser",
+        "brand": "Cetaphil",
+        "description": "Formulanya yang bebas sabun telah memenangkan banyak penghargaan dari orang-orang dalam industri kecantikan dan komunitas perawatan kesehatan. Sifatnya yang lembut dan tidak menyebabkan iritasi menenangkan kulit Anda saat membersihkan. Cetaphil Gentle Skin Cleanser diformulasikan untuk bekerja pada semua jenis kulit, bahkan untuk bayi.",
+        "price": "Rp.407500",
+        "CategoryId": 4,
+        "img_url": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/MTA-0389107/cetaphil_cetaphil-gentle-skin-cleanser--125-ml-_full03.jpg"
+    }
+
+]

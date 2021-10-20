@@ -3,10 +3,10 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     return queryInterface.addColumn(
-      'MyCarts',
-      'quantity',
+      'Products',
+      'img_url',
       {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
       },
       {
         onUpdate: 'cascade',
@@ -17,9 +17,9 @@ module.exports = {
 
   down: async (queryInterface, Sequelize) => {
     return queryInterface.removeColumn(
-      'MyCarts',
-      'quantity',
+      'Products',
+      'img_url',
       {}
-    );
-  }
+    )
+    }
 };
