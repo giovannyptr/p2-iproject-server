@@ -1,7 +1,22 @@
 const { User } = require('../models')
 const { comparePassword } = require('../helpers/bcrypt')
+const { createToken } = require('../helpers/jwt')
 
 class UserController {
+
+    static async register(req, res, next) {
+
+        try {
+            const { email, password } = req.body
+            const response = await User.create({email, password })
+
+            res.status(201).json({ id: response.id, email: response.email})
+
+        } catch (err) {
+            next(err)
+
+        }
+    }
 
     static async login(req, res, next) {
 
