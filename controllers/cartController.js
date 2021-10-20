@@ -27,7 +27,7 @@ class CartController {
                 }
 
                 else {
-                    throw ({ name: `Product id Not Found` })
+                    throw ({ name: `productNotFound` })
                 }
             }
 
@@ -81,7 +81,7 @@ class CartController {
             const beforeUpdate = await MyCart.findOne({ where: { id } });
 
             if (!beforeUpdate) {
-                throw { name: "notFound" };
+                throw { name: "productNotFound" };
             }
 
             const result = await MyCart.update({ quantity }, { where: { id }, returning: true });
