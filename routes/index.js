@@ -12,10 +12,10 @@ router.post('/register', userController.register)
 router.post('/login', userController.login)
 
 router.get('/products', productController.getProducts)
-router.get('/products', productController.detailProduct)
+router.get('/products/:id', productController.detailProduct)
 
 router.post('/mycarts', cartController.addCart)
-router.get('/mycarts', cartController.gerCart)
+router.get('/mycarts', cartController.getMyCart)
 router.patch('/mycarts/:id', cartController.quantity)
 router.delete('/mycarts/:id', cartController.removeCart)
 
