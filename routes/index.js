@@ -11,8 +11,9 @@ router.get('/', (req, res) => {
 router.post('/register', userController.register)
 router.post('/login', userController.login)
 
-router.get('/categories', productController.getCategory)
 router.get('/products', productController.getProducts)
+router.get('/products', productController.detailProduct)
+
 router.post('/mycarts', cartController.addCart)
 router.get('/mycarts', cartController.gerCart)
 router.patch('/mycarts/:id', cartController.quantity)

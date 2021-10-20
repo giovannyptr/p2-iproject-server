@@ -5,7 +5,8 @@ const {
 module.exports = (sequelize, DataTypes) => {
   class Product extends Model {
     static associate(models) {
-      Product.belongsToMany(models.User,
+      Product.belongsTo(models.Category, { foreignKey: 'categoryId' })
+      Product.belongsToMany(models.MyCart,
         {
           through: models.MyCart, foreignKey: 'ProductId'
         });
