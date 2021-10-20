@@ -4,6 +4,7 @@ const productController = require('../controllers/productController')
 const cartController = require('../controllers/cartController')
 const authentication = require('../middlewares/authentication')
 const authorization = require('../middlewares/authorization')
+const errorHandler = require('../middlewares/errorHandler')
 
 
 router.get('/', (req, res) => {
@@ -22,6 +23,8 @@ router.post('/mycarts', authorization, cartController.addCart)
 router.get('/mycarts', cartController.getMyCart)
 router.patch('/mycarts/:id', authorization, cartController.quantity)
 router.delete('/mycarts/:id', authorization, cartController.removeCart)
+
+router.use(errorHandler)
 
 
 module.exports = router
