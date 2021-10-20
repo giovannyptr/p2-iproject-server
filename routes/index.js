@@ -2,6 +2,7 @@ const router = require('express').Router()
 const userController= require('../controllers/userController')
 const productController = require('../controllers/productController')
 const cartController = require('../controllers/cartController')
+const authentication = require('../middlewares/authentication')
 
 
 router.get('/', (req, res) => {
@@ -13,6 +14,8 @@ router.post('/login', userController.login)
 
 router.get('/products', productController.getProducts)
 router.get('/products/:id', productController.detailProduct)
+
+router.use(authentication)
 
 router.post('/mycarts', cartController.addCart)
 router.get('/mycarts', cartController.getMyCart)
