@@ -5,7 +5,7 @@ const {
 module.exports = (sequelize, DataTypes) => {
   class Product extends Model {
     static associate(models) {
-      Product.belongsTo(models.Category, { foreignKey: 'categoryId' })
+      Product.belongsTo(models.Category, { foreignKey: 'CategoryId' })
       Product.belongsToMany(models.User,
         {
           through: models.MyCart, foreignKey: 'ProductId'
@@ -37,6 +37,9 @@ module.exports = (sequelize, DataTypes) => {
       },
       onUpdate: 'cascade',
       onDelete: 'cascade'
+    },
+    img_url: {
+      type: DataTypes.STRING
     }
   }, {
     sequelize,
