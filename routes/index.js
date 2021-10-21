@@ -20,12 +20,10 @@ router.use(authentication)
 
 router.post('/mycarts', cartController.addCart)
 router.get('/mycarts', cartController.getMyCart)
-router.patch('/mycarts/:id', cartController.quantity)
 router.delete('/mycarts/:id', cartController.removeCart)
 
-router.post('/midtrans', cartController.notifMidtransHandler);
 
-router.post('/checkout', cartController.checkoutProducts);
+router.post('/order', productController.order)
 
 router.use(errorHandler)
 
