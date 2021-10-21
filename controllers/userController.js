@@ -22,6 +22,7 @@ class UserController {
 
         try {
             const { email, password } = req.body
+            console.log(req.body)
 
             //cari email
             const response = await User.findOne({ where: { email } })
