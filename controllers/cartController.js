@@ -74,6 +74,7 @@ class CartController {
             res.status(200).json({ message: `Your product have been removed` })
 
         } catch (error) {
+            
             next(error)
         }
     }
