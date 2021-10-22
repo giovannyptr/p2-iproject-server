@@ -55,29 +55,7 @@ class CartController {
 
     }
 
-    static async removeCart(req, res, next) {
-
-        try {
-
-            const { Productid } = req.body
-
-            console.log(req.body.ProductId, "<<<Cek");
-
-            const cart = await MyCart.findOne({where: {UserId: req.user.id, ProductId: req.body.ProductId}})
-
-            if (!cart) {
-                throw { name: 'Yourcartisempty' }
-            }
-
-            const removeCart = await MyCart.destroy({ where: {UserId: req.user.id, ProductId: req.body.ProductId} })
-
-            res.status(200).json({ message: `Your product have been removed` })
-
-        } catch (error) {
-            
-            next(error)
-        }
-    }
+   
 
    
 
